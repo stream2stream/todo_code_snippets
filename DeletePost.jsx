@@ -64,12 +64,10 @@ export default function DeletePost(props) {
     return (
         <>
             {!delete_success && get_success &&
-                {/* TODO Make use off the <PostView> component*/}
-                {/* You will need to pass the correct properties */}
+                <PostView content={content} title={title} postID={postID} btnText={`Confirm Delete Post`} hide={false} handleSubmit={handleSubmit} />
             }
             {delete_success &&
-                {/* TODO Make use off the <SuccessMessage> component*/}
-                {/* You will need to pass the correct properties */}
+                <SuccessMessage postID={postID} action={`deleted`} link={`/`} link_text={`Show All Posts`} />
             }
         </>
     );
